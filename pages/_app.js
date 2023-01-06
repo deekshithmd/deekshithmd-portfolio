@@ -1,4 +1,3 @@
-import "../styles/globals.css";
 import { ThemeProvider } from "../contexts/ThemeContext";
 import Theme from "../theme/Theme";
 

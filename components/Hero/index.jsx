@@ -1,20 +1,18 @@
 import React from "react";
+import { useRouter } from "next/router";
 import {
-  HeroContainer,
   HeroContentContainer,
   ContentWrapper,
   Image,
   Item,
-  Item1,
-  Item2,
-  Item3,
-  Item4,
 } from "./hero.styled";
+import { PageContainer } from "../../styles/globalStyle.styled";
 import { Header } from "../Header";
 
 export const Hero = () => {
+  const router = useRouter();
   return (
-    <HeroContainer>
+    <PageContainer>
       <Header />
       <HeroContentContainer>
         <div>
@@ -35,13 +33,32 @@ export const Hero = () => {
               transform: "translate(-50%,-50%)",
             }}
           />
-          <Item>About</Item>
-          <Item1>Projects</Item1>
-          <Item2>Technologies</Item2>
-          <Item3>Contact</Item3>
-          <Item4>Experience</Item4>
+          <Item top="35px" left="-200px" onClick={() => router.push("/about")}>
+            About Me
+          </Item>
+          <Item
+            top="150px"
+            left="-250px"
+            onClick={() => router.push("/skills")}
+          >
+            Skills
+          </Item>
+          <Item
+            top="270px"
+            left="-250px"
+            onClick={() => router.push("/projects")}
+          >
+            Projects
+          </Item>
+          <Item
+            top="385px"
+            left="-200px"
+            onClick={() => router.push("/contact")}
+          >
+            Contact
+          </Item>
         </ContentWrapper>
       </HeroContentContainer>
-    </HeroContainer>
+    </PageContainer>
   );
 };

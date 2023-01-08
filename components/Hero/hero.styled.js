@@ -20,12 +20,6 @@ export const ContentWrapper = styled.div`
   );
 `;
 
-export const Image = styled.img`
-  width: ${(props) => props.width || "50px"};
-  height: ${(props) => props.height || "50px"};
-  border-radius: 50%;
-`;
-
 export const Item = styled.div`
   position: absolute;
   top: ${(props) => props.top || "10px"};

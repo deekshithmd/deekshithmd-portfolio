@@ -15,3 +15,9 @@ export const PageContainer = styled.div`
   -moz-box-shadow: 0px -1px 18px -3px rgba(0, 0, 0, 0.75);
   box-shadow: ${({ theme }) => theme.shadow.hero};
 `;
+
+export const Image = styled.img`
+  width: ${(props) => props.width || "50px"};
+  height: ${(props) => props.height || "50px"};
+  border-radius: ${(props) => props.borderRadius || "0px"};
+`;

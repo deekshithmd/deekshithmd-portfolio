@@ -1,5 +1,6 @@
+import { Projects as Project } from "../../components/Projects";
 const Projets = () => {
-  return <h1>Projets</h1>;
+  return <Project />;
 };
 
 export default Projets;

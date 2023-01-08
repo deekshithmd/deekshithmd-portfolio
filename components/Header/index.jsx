@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { HeaderContainer, Icon } from "./header.styled";
+import { HeaderContainer, Icon, LogoContainer } from "./header.styled";
 import { useTheme } from "../../contexts/ThemeContext";
 
 export const Header = () => {
@@ -7,7 +7,9 @@ export const Header = () => {
   const router = useRouter();
   return (
     <HeaderContainer>
-      <h1 onClick={() => router.push("/landing")}>D</h1>
+      <LogoContainer>
+        <h1 onClick={() => router.push("/landing")}>Deekshith M D</h1>
+      </LogoContainer>
       <Icon
         onClick={() => toggleTheme()}
         src={isDarkTheme ? "images/dark.png" : "images/light.png"}

@@ -1,12 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
-import {
-  HeroContentContainer,
-  ContentWrapper,
-  Image,
-  Item,
-} from "./hero.styled";
-import { PageContainer } from "../../styles/globalStyle.styled";
+import { HeroContentContainer, ContentWrapper, Item } from "./hero.styled";
+import { PageContainer, Image } from "../../styles/globalStyle.styled";
 import { Header } from "../Header";
 
 export const Hero = () => {
@@ -25,6 +20,7 @@ export const Hero = () => {
             src={"images/deekshith.png"}
             height="300px"
             width="300px"
+            borderRadius="300px"
             alt=""
             style={{
               position: "absolute",

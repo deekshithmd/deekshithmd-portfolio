@@ -13,3 +13,7 @@ export const Icon = styled.img`
   height: ${(props) => props.height || "10px"};
   cursor: pointer;
 `;
+
+export const LogoContainer = styled.div`
+  cursor: pointer;
+`;

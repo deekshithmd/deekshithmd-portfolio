@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const ProjectContainer = styled.div`
   width: 100%;
+  padding: 20px;
   display: flex;
   justify-content: flex-start;
   gap: 10px;
@@ -11,7 +12,7 @@ export const ProjectContainer = styled.div`
 export const ProjectCardContent = styled.div`
   position: relative;
   width: 300px;
-  height: 400px;
+  height: 300px;
   text-align: center;
   border-radius: 20px;
   transition: transform 1s;
@@ -37,7 +38,8 @@ export const FrontCard = styled.div`
   z-index: 2;
   border-radius: 20px;
   backface-visibility: hidden;
-  background-color: red;
+  background: ${({ theme }) => theme.background.projectfront};
+  padding: 20px;
 `;
 
 export const BackCard = styled.div`
@@ -48,16 +50,17 @@ export const BackCard = styled.div`
   z-index: 1;
   border-radius: 20px;
   backface-visibility: hidden;
-  background-color: blue;
+  background: ${({ theme }) => theme.background.projectback};
+  padding: 20px;
 `;
 
 export const ButtonContainer = styled.div`
-width:100%;
-display flex;
-justify-content:center;
-gap:20px;
-align-items:center;
-padding:10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  padding: 10px;
 `;
 
 export const Button = styled.button`
@@ -65,3 +68,15 @@ export const Button = styled.button`
   padding: 10px 15px;
   border: none;
 `;
+
+export const ProjectContainerGrid = styled.div`
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+`;
+
+// export const GridOne=styled.div`
+// grid:First
+// `

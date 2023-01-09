@@ -9,13 +9,19 @@ import {
   ProjectContainer,
   Button,
   ButtonContainer,
+  ProjectContainerGrid,
 } from "./projects.styled";
 import { projects } from "../../utils/constants";
 export const Projects = () => {
+  const scrollRef = React.useRef();
+  const scroll = (offset) => {
+    scrollRef.current.scrollLeft += offset;
+  };
   return (
     <PageContainer>
       <Header />
-      <ProjectContainer>
+      <Button onClick={() => scroll(200)}>Scroll</Button>
+      <ProjectContainer ref={scrollRef}>
         {projects.map((project) => {
           return (
             <ProjectCardContainer key={project.id} tranform="180deg">
@@ -28,17 +34,44 @@ export const Projects = () => {
                     height="150px"
                     alt=""
                   />
-                  <Text>{project.description}</Text>
-                  <h3>Tech Stack Used</h3>
-                  {project.tech.map((tech, index) => {
-                    return <Text key={index}>{tech}</Text>;
-                  })}
+                  <Text fontSize={12}>{project.description}</Text>
+                  <Text fontSize={14} fontWeight={600}>
+                    Tech Stack Used
+                  </Text>
+                  <Text fontSize={12}>{project.tech}</Text>
                 </FrontCard>
                 <BackCard>
-                  <h1>Major Features</h1>
-                  {project.features.map((feature, index) => {
-                    return <Text key={index}>{feature}</Text>;
-                  })}
+                  <Text fontSize={14} fontWeight={600} marginBottom={20}>
+                    Major Features
+                  </Text>
+                  <ProjectContainerGrid>
+                    <ul>
+                      {project.features
+                        .slice(0, project.features.length / 2)
+                        .map((feature, index) => {
+                          return (
+                            <Text fontSize={12} textAlign="left" key={index}>
+                              {feature}
+                            </Text>
+                          );
+                        })}
+                    </ul>
+                    <div>
+                      {project.features
+                        .slice(
+                          project.features.length / 2,
+                          project.features.length
+                        )
+                        .map((feature, index) => {
+                          return (
+                            <Text fontSize={12} textAlign="left" key={index}>
+                              {feature}
+                            </Text>
+                          );
+                        })}
+                    </div>
+                  </ProjectContainerGrid>
+
                   <ButtonContainer>
                     <Button>Project</Button>
                     <Button>Code</Button>

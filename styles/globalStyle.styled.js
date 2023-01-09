@@ -23,6 +23,8 @@ export const Image = styled.img`
 `;
 
 export const Text = styled.p`
-font-size:${(props) => `${props.fontSize}px` || "16px"}
-font-weight:${(props) => `${props.fontWeight}px` || "400"}
+  font-size: ${(props) => `${props.fontSize}px` || "14px"};
+  font-weight: ${(props) => props.fontWeight || 400};
+  text-align: ${(props) => props.textAlign || "center"};
+  margin-bottom: ${(props) => `${props.marginBottom}px` || "0px"};
 `;

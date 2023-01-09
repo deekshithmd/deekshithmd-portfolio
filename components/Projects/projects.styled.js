@@ -1,8 +1,16 @@
 import styled from "styled-components";
 
+export const ProjectContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  overflow-x: auto;
+`;
+
 export const ProjectCardContent = styled.div`
   position: relative;
-  width: 400px;
+  width: 300px;
   height: 400px;
   text-align: center;
   border-radius: 20px;
@@ -18,7 +26,7 @@ export const ProjectCardContainer = styled.div`
   perspective: 1000px;
   cursor: pointer;
   &:hover ${ProjectCardContent} {
-    transform: rotateY(180deg);
+    transform: ${(props) => `rotateY(${props.tranform})`};
   }
 `;
 
@@ -41,4 +49,19 @@ export const BackCard = styled.div`
   border-radius: 20px;
   backface-visibility: hidden;
   background-color: blue;
+`;
+
+export const ButtonContainer = styled.div`
+width:100%;
+display flex;
+justify-content:center;
+gap:20px;
+align-items:center;
+padding:10px;
+`;
+
+export const Button = styled.button`
+  border-radius: 10px;
+  padding: 10px 15px;
+  border: none;
 `;

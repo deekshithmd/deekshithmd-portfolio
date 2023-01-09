@@ -1,0 +1,32 @@
+export const projects = [
+  {
+    id: 1,
+    name: "FreshUI",
+    description: "component library",
+    tech: ["HTML", "CSS", "Javascript"],
+    features: ["Alerts", "Card", "Buttons", "Grid Layout", "Image"],
+    image: "images/FreshUI.png",
+    source: "",
+    project: "",
+  },
+  {
+    id: 2,
+    name: "FreshBuy",
+    description: "Ecommerce website",
+    tech: ["HTML", "CSS", "Javascript", "ReactJS", "Context"],
+    features: ["Authentication", "Cart", "Wishlist", "Payment"],
+    image: "images/FreshBuy.png",
+    source: "",
+    project: "",
+  },
+  {
+    id: 3,
+    name: "FreshView",
+    description: "Video Library",
+    tech: ["HTML", "CSS", "Javascript", "ReactJS", "Context"],
+    features: ["Authentication", "Playlist", "Wishlist", "Liked"],
+    image: "images/FreshView.png",
+    source: "",
+    project: "",
+  },
+];

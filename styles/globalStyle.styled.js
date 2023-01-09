@@ -21,3 +21,8 @@ export const Image = styled.img`
   height: ${(props) => props.height || "50px"};
   border-radius: ${(props) => props.borderRadius || "0px"};
 `;
+
+export const Text = styled.p`
+font-size:${(props) => `${props.fontSize}px` || "16px"}
+font-weight:${(props) => `${props.fontWeight}px` || "400"}
+`;

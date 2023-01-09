@@ -13,5 +13,6 @@ export const GlobalStyles = createGlobalStyle`
         box-sizing:border-box;
         color:${({ theme }) => theme.text.primary};
         background-color:${({ theme }) => theme.background.default};
+        font-family: 'Roboto Slab', serif;
     }
 `;

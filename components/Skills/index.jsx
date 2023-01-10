@@ -1,10 +1,9 @@
 import React from "react";
 import { Header } from "../Header";
-import { PageContainer } from "../../styles/globalStyle.styled";
-import { SkillBadgeContainer, SkillBadge } from "./technologies.styled";
-import { Image } from "../Hero/hero.styled";
+import { PageContainer, Image } from "../../styles/globalStyle.styled";
+import { SkillBadgeContainer, SkillBadge } from "./skills.styled";
 
-export const Technologies = () => {
+export const Skills = () => {
   return (
     <PageContainer>
       <Header />
@@ -36,6 +35,14 @@ export const Technologies = () => {
           <h2>NextJS</h2>
         </SkillBadge>
         <SkillBadge>
+          <Image src={"images/vue.png"} width="50px" height="50px" alt="" />
+          <h2>VueJS</h2>
+        </SkillBadge>
+        <SkillBadge>
+          <Image src={"images/github1.png"} width="50px" height="50px" alt="" />
+          <h2>GitHub</h2>
+        </SkillBadge>
+        <SkillBadge>
           <Image
             src={"images/tailwind.png"}
             width="50px"
@@ -43,6 +50,14 @@ export const Technologies = () => {
             alt=""
           />
           <h2>TailwindCSS</h2>
+        </SkillBadge>
+        <SkillBadge>
+          <Image src={"images/mui.png"} width="50px" height="50px" alt="" />
+          <h2>Material UI</h2>
+        </SkillBadge>
+        <SkillBadge>
+          <Image src={"images/vercel.svg"} width="50px" height="50px" alt="" />
+          <h2>Vercel</h2>
         </SkillBadge>
       </SkillBadgeContainer>
     </PageContainer>

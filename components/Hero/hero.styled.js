@@ -22,6 +22,8 @@ export const ContentWrapper = styled.div`
 
 export const Item = styled.div`
   position: absolute;
+  font-size: 18px;
+  font-weight: 600;
   top: ${(props) => props.top || "10px"};
   left: ${(props) => props.left || "-100px"};
   height: 80px;

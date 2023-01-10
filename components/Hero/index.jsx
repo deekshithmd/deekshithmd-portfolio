@@ -32,17 +32,13 @@ export const Hero = () => {
           <Item top="35px" left="-200px" onClick={() => router.push("/about")}>
             About Me
           </Item>
-          <Item
-            top="150px"
-            left="-250px"
-            onClick={() => router.push("/skills")}
-          >
+          <Item top="150px" left="-250px" onClick={() => router.push("/skill")}>
             Skills
           </Item>
           <Item
             top="270px"
             left="-250px"
-            onClick={() => router.push("/projects")}
+            onClick={() => router.push("/project")}
           >
             Projects
           </Item>

@@ -10,8 +10,11 @@ import {
   Button,
   ButtonContainer,
   ProjectContainerGrid,
+  ForwardButton,
+  BackwardButton,
 } from "./projects.styled";
 import { projects } from "../../utils/constants";
+
 export const Projects = () => {
   const scrollRef = React.useRef();
   const scroll = (offset) => {
@@ -20,8 +23,14 @@ export const Projects = () => {
   return (
     <PageContainer>
       <Header />
-      <Button onClick={() => scroll(200)}>Scroll</Button>
+      <h1>Projects</h1>
       <ProjectContainer ref={scrollRef}>
+        <ForwardButton onClick={() => scroll(300)}>
+          <Image src={"images/next.png"} height="30px" width="30px" alt="" />
+        </ForwardButton>
+        <BackwardButton onClick={() => scroll(-300)}>
+          <Image src={"images/back.png"} height="30px" width="30px" alt="" />
+        </BackwardButton>
         {projects.map((project) => {
           return (
             <ProjectCardContainer key={project.id} tranform="180deg">
@@ -73,8 +82,18 @@ export const Projects = () => {
                   </ProjectContainerGrid>
 
                   <ButtonContainer>
-                    <Button>Project</Button>
-                    <Button>Code</Button>
+                    <Button
+                      hoverColor="#29803e"
+                      onClick={() => (window.location = project.project)}
+                    >
+                      Project
+                    </Button>
+                    <Button
+                      hoverColor="#5e6b61"
+                      onClick={() => (window.location = project.source)}
+                    >
+                      Code
+                    </Button>
                   </ButtonContainer>
                 </BackCard>
               </ProjectCardContent>

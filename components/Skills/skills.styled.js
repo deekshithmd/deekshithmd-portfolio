@@ -6,7 +6,7 @@ export const SkillBadgeContainer = styled.div`
   margin-top: 30px;
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-template-rows: 100px 100px;
+  grid-template-rows: 100px 100px 100px 100px;
   gap: 20px 10px;
   justify-content: space-evenly;
   align-items: center;

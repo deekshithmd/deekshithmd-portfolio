@@ -1,6 +1,8 @@
-import { PageContainer } from "../../styles/globalStyle.styled";
+import { PageContainer, Image } from "../../styles/globalStyle.styled";
 import { AboutCard } from "./about.styled";
 import { Header } from "../Header";
+import { LinkItem, ContactCard } from "../Contacts/contacts.styled";
+
 export const AboutMe = () => {
   return (
     <PageContainer>
@@ -15,6 +17,12 @@ export const AboutMe = () => {
         neogCamp. Later I joined web3 startup called Push Protocol as frontend
         developer.
       </AboutCard>
+      <ContactCard>
+        <Image src="images/resume.png" width="40px" height="40px" alt="" />
+        <LinkItem href="files/Deekshith_M_D_Resume.pdf" download>
+          Resume
+        </LinkItem>
+      </ContactCard>
     </PageContainer>
   );
 };

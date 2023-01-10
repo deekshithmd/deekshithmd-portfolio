@@ -2,17 +2,23 @@ import styled from "styled-components";
 
 export const ProjectContainer = styled.div`
   width: 100%;
-  padding: 20px;
+  height: 100%;
+  padding: 20px 0px;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   gap: 10px;
   overflow-x: auto;
+  &::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
 `;
 
 export const ProjectCardContent = styled.div`
   position: relative;
   width: 300px;
-  height: 300px;
+  height: 350px;
   text-align: center;
   border-radius: 20px;
   transition: transform 1s;
@@ -67,6 +73,9 @@ export const Button = styled.button`
   border-radius: 10px;
   padding: 10px 15px;
   border: none;
+  &:hover {
+    background: ${(props) => props.hoverColor || "grey"};
+  }
 `;
 
 export const ProjectContainerGrid = styled.div`
@@ -77,6 +86,34 @@ export const ProjectContainerGrid = styled.div`
   width: 100%;
 `;
 
-// export const GridOne=styled.div`
-// grid:First
-// `
+export const ForwardButton = styled.button`
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 25px;
+  top: 50%;
+  border-radius: 55px;
+  padding: 10px 15px;
+  border: none;
+  z-index: 2;
+  background: #525357;
+`;
+
+export const BackwardButton = styled.button`
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 25px;
+  top: 50%;
+  border-radius: 55px;
+  padding: 10px 15px;
+  border: none;
+  z-index: 2;
+  background: #525357;
+`;
